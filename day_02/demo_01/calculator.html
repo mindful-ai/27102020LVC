@@ -42,6 +42,31 @@
 
     <script type="text/javascript">
       
+      var opa = document.getElementById("ina");
+      var opb = document.getElementById("inb");
+      var res = document.getElementById("result");
+
+      document.getElementById("submit").onclick = function() {
+        var check = document.getElementsByName("op");
+        var finalResult;
+        var op;
+
+        for(i = 0; i < check.length; i++){
+          if(check[i].checked){
+            op = check[i].value;
+            break;
+          }
+        }
+        switch(op){
+          case "add": {finalResult = Number(opa.value) + Number(opb.value); break; }
+          case "sub": {finalResult = Number(opa.value) - Number(opb.value); break; }
+          case "mul": {finalResult = Number(opa.value) * Number(opb.value); break; }
+          case "div": {finalResult = Number(opa.value) / Number(opb.value); break; }
+        }
+        res.innerHTML = finalResult;
+      }
+
+
       
 
     </script>
