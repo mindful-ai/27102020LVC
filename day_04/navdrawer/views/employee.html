@@ -1,0 +1,24 @@
+<div class="oj-hybrid-padding">
+  <h1>Employees</h1>
+
+  <div>
+      <h6>Name : <input data-bind="value:name"> </h6>
+      <h6>Age  : <input data-bind="textInput:age"> </h6>
+      <hr>
+      <h3>Your name is <span data-bind="text:name"> </span> and age is <span data-bind="text:age"> </span><h3>
+  </div>
+
+    <div id='chart-container'>
+
+      <oj-chart 
+        type = "pie" 
+        series ="[[datasource2]]"
+        style-defaults.three-d-effect="[[threeDValue]]"
+        style-defaults.pie-inner-radius="[[innerRadius]]"
+        hover-behavior="dim">
+      </oj-chart>
+
+                
+    </div>
+
+</div>

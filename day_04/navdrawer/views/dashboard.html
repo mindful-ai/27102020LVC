@@ -1,0 +1,31 @@
+<!--
+ Copyright (c) 2014, 2020, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Dashboard Content Area</h1>
+  <div>
+      <h6>Name : <input data-bind="value:name"> </h6>
+      <h6>Age  : <input data-bind="textInput:age"> </h6>
+      <hr>
+      <h3>Your name is <span data-bind="text:name"> </span> and age is <span data-bind="text:age"> </span><h3>
+  </div>
+
+  <h3>Please follow the statistics</h3>
+
+  <oj-select-single id="select1"
+              style="max-width:20em"
+              data="[[browsersDP]]" 
+              value="{{selectVal}}">
+            </oj-select-single>
+
+            
+  <oj-chart type = "pie" series ="[[datasource]]">
+  </oj-chart>
+
+  <h3>Your time should be distributed the following way</h3>
+  <div data-bind="ojComponent:{ component: 'ojChart', type: 'pie', series: datasource2 }">
+  </div>
+
+</div>
